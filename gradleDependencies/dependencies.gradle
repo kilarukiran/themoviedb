@@ -1,0 +1,80 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Versions
+    //Android
+    androidCompileSdkVersion = 25
+    androidBuildToolsVersion = "25.0.0"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 25
+
+    supportVersion = "25.2.0"
+    daggerVersion = '2.0.2'
+    rxJavaVersion = '1.1.6'
+    rxAndroidVersion = '1.2.1'
+    javaxAnnotationVersion = '1.0'
+    javaxAnnotationVersion = '1.0'
+    butterKnifeVersion = '7.0.1'
+    picassoVersion = '2.5.2'
+
+    gsonVersion = '2.6.2'
+    retrofitVersion = '2.0.0'
+    realmVersion = '3.0.0'
+    okthttpVersion = '3.2.0'
+
+    espressoVersion = "2.2.2"
+    jUnitVersion = "4.12"
+    testRunnerVersion = "0.5"
+    espressoContribVersion = "2.2"
+
+    testingDependencies = [
+            espresso_core   : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            junit           : "junit:junit:${jUnitVersion}",
+            testRunner      : "com.android.support.test:runner:${testRunnerVersion}",
+            espresso_contrib: "com.android.support.test" +
+                    ".espresso:espresso-contrib:${espressoContribVersion}"
+    ]
+
+    applicationDependencies = [
+            appCompat_v7    : "com.android.support:appcompat-v7:${supportVersion}",
+            cardView        : "com.android.support:cardview-v7:${supportVersion}",
+            support_v4      : "com.android.support:support-v4:${supportVersion}",
+            design          : "com.android.support:design:${supportVersion}",
+            recyclerView    : "com.android.support:recyclerview-v7:${supportVersion}",
+            percent         : "com.android.support:percent:${supportVersion}",
+            butterKnife     : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            dagger          : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler  : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            rxJava          : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid       : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotations: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            picasso         : "com.squareup.picasso:picasso:${picassoVersion}"
+    ]
+
+    dataDependencies = [
+            dagger              : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            rxJava              : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid           : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            retrofit            : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitGson        : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitRxAdapter   : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            javaxAnnotations    : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            realm               : "io.realm:realm-android:${realmVersion}",
+            logging_interceptor : "com.squareup.okhttp3:logging-interceptor:${okthttpVersion}",
+            support_annotations : "com.android.support:support-annotations:${supportVersion}",
+            okhttp_urlconnection: "com.squareup.okhttp3:okhttp-urlconnection:${okthttpVersion}",
+    ]
+
+    domainDependencies = [
+            dagger          : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler  : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            rxJava          : "io.reactivex:rxjava:${rxJavaVersion}",
+            javaxAnnotations: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            gson            : "com.google.code.gson:gson:${gsonVersion}"
+    ]
+}

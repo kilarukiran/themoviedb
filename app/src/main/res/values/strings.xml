@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">The Movie Database</string>
+    <string name="error_please_try_later">Please try again</string>
+    <string name="error_no_internet">Please check your internet connection and try again</string>
+    <string name="movies_title">Movies</string>
+    <string name="movie_details_title">Movie Details</string>
+    <string name="release_date_label">Release Date:</string>
+    <string name="vote_count_label">Vote Count:</string>
+    <string name="vote_avg_label">Vote Acg:</string>
+    <string name="popularity_label">Popularity:</string>
+    <string name="empty_view_movie_details">Select a movie.</string>
+
+    <string name="frag_arg_err">Fragment arguments cannot be null</string>
+
+    <!--Movie List-->
+    <string name="hint_search_text">Enter search text</string>
+    <string name="msg_no_results">No results.</string>
+    <string name="query_error">Query must be provided.</string>
+
+    <!--Movie Details-->
+    <string name="movie_not_selected_msg">Select a movie.</string>
+</resources>

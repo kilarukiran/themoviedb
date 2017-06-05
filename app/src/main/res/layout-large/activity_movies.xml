@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_videos_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.github.kilarukirankumar.view.activity.MoviesActivity">
+    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="?attr/actionBarSize">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/movie_list_container"
+            android:layout_weight="3"
+            android:background="@drawable/layout_border"></FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/movie_details_container"
+            android:background="@drawable/layout_border"
+            android:layout_weight="5"></FrameLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
