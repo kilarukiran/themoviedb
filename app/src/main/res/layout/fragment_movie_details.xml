@@ -1,144 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_marginLeft="@dimen/movie_details_margin_left"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_movie_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:textSize="@dimen/movie_title_text_size"
-        android:textColorLink="@android:color/darker_gray"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_release_date_label"
-        android:text="Release Date:"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        app:layout_constraintTop_toBottomOf="@+id/tv_movie_title"
-        android:visibility="invisible"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_release_date"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        app:layout_constraintTop_toBottomOf="@+id/tv_movie_title"
-        app:layout_constraintLeft_toRightOf="@+id/tv_release_date_label"
-        android:paddingLeft="@dimen/title_padding_left"
-        android:visibility="invisible"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/iv_poster"
-        android:src="@drawable/sample_poster"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_release_date_label"
-        app:layout_constraintRight_toRightOf="parent"
-        android:visibility="invisible"
-        />
-
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_overview"
-        app:layout_constraintLeft_toLeftOf="parent"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/movie_details_margin_left"
-        android:layout_marginRight="@dimen/movie_details_margin_right"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_poster"
-        android:padding="@dimen/title_padding"
-        android:visibility="invisible"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_vote_count_label"
-        android:layout_marginLeft="@dimen/movie_details_margin_left"
-        android:text="@string/vote_count_label"
-        app:layout_constraintStart_toStartOf="@+id/tv_overview"
-        app:layout_constraintTop_toBottomOf="@+id/tv_overview"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/tv_vote_avg_label"
-        android:visibility="invisible"
-        />
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColorLink="@android:color/darker_gray"
+            android:textSize="@dimen/movie_title_text_size"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_vote_count"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_vote_count_label"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vote_count_label"
-        app:layout_constraintRight_toRightOf="@+id/tv_vote_count_label"
-        android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/tv_release_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release Date:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_vote_avg_label"
-        android:text="@string/vote_avg_label"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_vote_count_label"
-        app:layout_constraintLeft_toRightOf="@+id/tv_vote_count_label"
-        app:layout_constraintRight_toLeftOf="@+id/tv_popularity_label"
-        android:layout_marginLeft="@dimen/label_margin"
-        android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/tv_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/title_padding_left"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@+id/tv_release_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_vote_avg"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vote_avg_label"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_vote_avg_label"
-        app:layout_constraintRight_toRightOf="@+id/tv_vote_avg_label"
-        android:visibility="gone"
-        />
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sample_poster"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_release_date_label" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_popularity_label"
-        android:text="@string/popularity_label"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_vote_count_label"
-        app:layout_constraintLeft_toRightOf="@+id/tv_vote_avg_label"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="@dimen/label_margin"
-        android:layout_marginRight="@dimen/movie_details_margin_left"
-        android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/movie_details_margin_left"
+            android:layout_marginRight="@dimen/movie_details_margin_right"
+            android:padding="@dimen/title_padding"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_poster" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_popularity"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        app:layout_constraintTop_toBottomOf="@+id/tv_popularity_label"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_popularity_label"
-        app:layout_constraintRight_toRightOf="@+id/tv_popularity_label"
-        android:visibility="invisible"
-        />
+        <TextView
+            android:id="@+id/tv_vote_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/movie_details_margin_left"
+            android:text="@string/vote_count_label"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_vote_avg_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_overview"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        android:text="@string/movie_not_selected_msg"
-        android:id="@+id/tv_empty_view_msg"
-        android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_vote_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_vote_count_label"
+            app:layout_constraintRight_toRightOf="@+id/tv_vote_count_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vote_count_label" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_vote_avg_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/label_margin"
+            android:text="@string/vote_avg_label"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_vote_count_label"
+            app:layout_constraintLeft_toRightOf="@+id/tv_vote_count_label"
+            app:layout_constraintRight_toLeftOf="@+id/tv_popularity_label" />
+
+        <TextView
+            android:id="@+id/tv_vote_avg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_vote_avg_label"
+            app:layout_constraintRight_toRightOf="@+id/tv_vote_avg_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vote_avg_label" />
+
+        <TextView
+            android:id="@+id/tv_popularity_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/label_margin"
+            android:layout_marginRight="@dimen/movie_details_margin_left"
+            android:text="@string/popularity_label"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_vote_count_label"
+            app:layout_constraintLeft_toRightOf="@+id/tv_vote_avg_label"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_popularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_popularity_label"
+            app:layout_constraintRight_toRightOf="@+id/tv_popularity_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_popularity_label" />
+
+        <TextView
+            android:id="@+id/tv_empty_view_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/movie_not_selected_msg"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
